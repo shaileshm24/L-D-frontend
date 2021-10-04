@@ -4,13 +4,19 @@ const INITIAL_STATE = {
 }
 
 const userLoginReducer = (currentState = INITIAL_STATE, action) => {
-    console.log(action);
+    console.log("UserLoginReducer",action, currentState);
     switch(action.type){
         case userLogin.SET_CURRENT_USER:
           return {
             ...currentState,
             currentUser: action.payload
           } 
+
+        case userLogin.DELETE_CURRENT_USER:
+          return{
+            ...currentState,
+            currentUser:action.payload
+          }
 
         default:
             return currentState;
