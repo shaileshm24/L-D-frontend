@@ -22,12 +22,12 @@ class App extends Component {
     if (currentUser) {
       this.setState({ loggedIn: true });
     } else{
-      this.setState({loggedIn:false})
+      this.setState({loggedIn:true})
     }
   };
   render() {
-    const {loggedIn, darkMode} = this.state;
-    console.log(loggedIn);
+    const {loggedIn} = this.state;
+    console.log("Logged in user",loggedIn);
     return (
       <div className="App">
         <Switch>

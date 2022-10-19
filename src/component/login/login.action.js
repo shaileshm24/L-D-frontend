@@ -1,11 +1,11 @@
 import axios from "axios";
 import { userLogin } from "./login.actionTypes";
 import history from "../../history";
-import { Redirect } from "react-router";
+// import { Redirect } from "react-router";
 
 export const setCurrentUser = user => {
-    console.log("hitory",history);
-console.log("Set current user",user);
+//     console.log("history",history);
+// console.log("Set current user",user);
     return async function(dispatch){
         return await axios.post("http://localhost:3020/api/login", {user:user})
         .then(res=>{

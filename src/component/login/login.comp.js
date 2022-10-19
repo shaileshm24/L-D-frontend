@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Redirect } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import { setCurrentUser } from "./login.action";
 import { connect } from "react-redux";
 import "./login.style.css";
@@ -35,9 +35,7 @@ class SignIn extends Component {
   render() {
     return (
       <div className="flex w-full m-auto background h-screen">
-        <div className="w-full md:w-1/2 flex flex-col m-auto bg-white rounded-full">
-          
-
+        <div className="w-full md:w-1/2 flex flex-col ml-auto justify-end  ">
           <div className="flex flex-col justify-center md:justify-center my-auto pt-8 md:pt-0 px-8 md:px-24 lg:px-32">
             <p className="text-center text-3xl">Welcome.</p>
             <form
@@ -57,7 +55,7 @@ class SignIn extends Component {
               </div>
 
               <div className="flex flex-col pt-4">
-                <label for="password" className="text-lg">
+                <label htmlFor="password" className="text-lg">
                   Password
                 </label>
                 <input
@@ -79,9 +77,9 @@ class SignIn extends Component {
             <div className="text-center pt-12 pb-12">
               <p>
                 Don't have an account?{" "}
-                <a href="register.html" className="underline font-semibold">
+                <Link to="signup" className="underline font-semibold">
                   Register here.
-                </a>
+                </Link>
               </p>
             </div>
           </div>
